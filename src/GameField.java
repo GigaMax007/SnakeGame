@@ -55,9 +55,9 @@ public class GameField extends JPanel implements ActionListener {
     }
 
     public void loadImages() {
-        ImageIcon iia = new ImageIcon("apple.png");
-        apple = iia.getImage();
-        ImageIcon iid = new ImageIcon("dot.png");
+        ImageIcon iia = new ImageIcon(getClass().getResource("apple.png")); // Для доступа к картинке использован
+        apple = iia.getImage();                                                   // метод getClass().getResource()
+        ImageIcon iid = new ImageIcon(getClass().getResource("dot.png"));
         dot = iid.getImage();
     }
 
