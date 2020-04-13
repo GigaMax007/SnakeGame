@@ -34,7 +34,6 @@ public class GameField extends JPanel implements ActionListener {
         initGame();
         addKeyListener(new FieldKeyListener());
         setFocusable(true);
-
     }
 
     public void initGame() {
@@ -43,7 +42,7 @@ public class GameField extends JPanel implements ActionListener {
             x[i] = 48 - i * DOT_SIZE;
             y[i] = 48;
         }
-        timer = new Timer(250, this);
+        timer = new Timer(270, this);
         timer.start();
         createApple();
     }
@@ -51,7 +50,6 @@ public class GameField extends JPanel implements ActionListener {
     public void createApple() {
         appleX = new Random().nextInt(20) * DOT_SIZE;
         appleY = new Random().nextInt(20) * DOT_SIZE;
-
     }
 
     public void loadImages() {
